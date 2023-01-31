@@ -18,7 +18,7 @@ class BPEdgeCrossing {
     fileprivate var _intersection: BPBezierIntersection
     
     var edge: BPBezierCurve?
-    var counterpart: BPEdgeCrossing?
+    weak var counterpart: BPEdgeCrossing?
     var fromCrossingOverlap = false
     var entry = false
     var processed = false

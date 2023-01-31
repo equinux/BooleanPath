@@ -1304,7 +1304,7 @@ public func ==(lhs: BPBezierCurve, rhs: BPBezierCurve) -> Bool {
 public class BPBezierCurve: CustomDebugStringConvertible, CustomStringConvertible, Equatable {
     
     fileprivate var _startShared = false
-    fileprivate var _contour: BPBezierContour?
+    fileprivate weak var _contour: BPBezierContour?
     fileprivate var _index: Int = 0
     var crossings: [BPEdgeCrossing] = []
     
