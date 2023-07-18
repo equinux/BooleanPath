@@ -39,6 +39,12 @@ public extension NSBezierPath {
                               control2: CGPoint(x: points[1].x, y: points[1].y))
             case .closePath:
                 path.closeSubpath()
+            case .cubicCurveTo:
+                // currently unsupported
+                break
+            case .quadraticCurveTo:
+                // currently unsupported
+                break
             }
         }
         return path
@@ -64,6 +70,12 @@ public extension NSBezierPath {
                     paths.append(path)
                 }
                 path = nil
+            case .cubicCurveTo:
+                // currently unsupported
+                break
+            case .quadraticCurveTo:
+                // currently unsupported
+                break
             }
         }
         return paths
@@ -140,6 +152,10 @@ public extension NSBezierPath {
                 Swift.print("moveTo: (\(points[2].x), \(points[2].y)), (\(points[0].x), \(points[0].y)), (\(points[1].x), \(points[1].y))")
             case .closePath:
                 Swift.print("close")
+            case .cubicCurveTo:
+                Swift.print("cubicCurveTo: unsupported")
+            case .quadraticCurveTo:
+                Swift.print("quadraticCurveTo: unsupported")
             }
         }
     }
