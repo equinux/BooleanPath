@@ -14,6 +14,6 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/Kyome22/BooleanPath.git", :tag => "#{spec.version}" }
   spec.frameworks   = 'Foundation', 'Cocoa', 'QuartzCore'
   spec.source_files  = "BooleanPath/**/*.swift"
-  spec.swift_version = "4.2"
+  spec.swift_version = "5"
   spec.requires_arc  = true
 end
